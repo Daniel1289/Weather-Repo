@@ -21,7 +21,7 @@ def format_response(weather):
     return final_str
 
 def get_weather(city):
-    weather_key = '5332d545c443e8aa047c91b54eb044b5'
+    weather_key = ''
     url = 'https://api.openweathermap.org/data/2.5/weather'
     params = {'APPID': weather_key, 'q': city, 'units': 'Metric'}
     response = requests.get(url, params=params)
@@ -31,8 +31,6 @@ def get_weather(city):
 
 root = tk.Tk()
 
-#5332d545c443e8aa047c91b54eb044b5
-#api.openweathermap.org/data/2.5/forecast/hourly?q={city name},{country code}
 
 canvas = tk.Canvas(root, height=HEIGHT, width=WIDTH)
 canvas.pack()
